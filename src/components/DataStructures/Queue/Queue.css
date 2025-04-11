@@ -1,0 +1,183 @@
+.queue-container {
+  text-align: center;
+  margin: 30px;
+  font-family: Arial, sans-serif;
+}
+
+.title {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.description {
+  font-size: 18px;
+  color: #34495e;
+  margin-bottom: 30px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.input-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.value-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #bdc3c7;
+  border-radius: 5px;
+  width: 300px;
+  transition: border-color 0.3s;
+}
+
+.value-input:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+.operation-button {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.operation-button:hover {
+  transform: scale(1.05);
+}
+
+.enqueue-button {
+  background-color: #27ae60;
+  color: white;
+}
+
+.dequeue-button {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.enqueue-front-button {
+  background-color: #f39c12;
+  color: white;
+}
+
+.dequeue-rear-button {
+  background-color: #e67e22;
+  color: white;
+}
+
+.peek-button,
+.peek-rear-button {
+  background-color: #2980b9;
+  color: white;
+}
+
+.clear-button {
+  background-color: #95a5a6;
+  color: white;
+}
+
+.queue-visualization {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;  /* Allow elements to wrap */
+  gap: 10px;  /* Space between queue nodes */
+  margin-top: 20px;
+  border: 3px dashed #7f8c8d;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #ecf0f1;
+  max-width: 100%;  /* Ensures it adjusts based on the container size */
+  width: 100%;  /* Ensures it expands to the available width */
+  height: auto;  /* Allow height to adjust dynamically */
+  box-sizing: border-box;  /* Prevent padding from increasing the container size */
+}
+
+.queue-node {
+  background-color: #8e44ad;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-size: 20px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  flex: 1 1 auto;  /* Allow the queue node to grow and shrink dynamically */
+  min-width: 80px;  /* Set a minimum width for the nodes */
+  max-width: 120px;  /* Set a maximum width to prevent overflow */
+}
+
+.queue-node:hover {
+  transform: scale(1.15);
+  background-color: #9b59b6;
+}
+
+
+.queue-node.simple {
+  background-color: #3498db;
+}
+
+.queue-node.circular {
+  background-color: #2ecc71;
+}
+
+.queue-node.priority {
+  background-color: #f1c40f;
+}
+
+.queue-node.deque {
+  background-color: #e74c3c;
+}
+
+.queue-node:not(:last-child)::after {
+  content: "\2192";
+  color: #34495e;
+  font-size: 24px;
+  position: absolute;
+  right: -25px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.placeholder-text {
+  color: #7f8c8d;
+  font-size: 18px;
+}
+
+
+.queue-node .front-indicator, .queue-node .rear-indicator {
+  display: inline-block;
+  color: white;
+  background-color: red;
+  padding: 2px 5px;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+
+.arrow-back-to-front line, .arrow-back-to-front polyline {
+  stroke: blue;
+  fill: blue;
+}
+
+.arrow-back-to-front path {
+  stroke-dasharray: 5, 5; /* For a dashed effect */
+  stroke-dashoffset: 0;
+  animation: drawArrow 2s ease forwards;
+}
+
+@keyframes drawArrow {
+  0% {
+    stroke-dashoffset: 500;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}

@@ -1,0 +1,162 @@
+/* Global Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(135deg, #61dafb, #282c34);
+  padding: 15px 20px;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.header.dark {
+  background: linear-gradient(135deg, #333, #1e1e1e);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: #61dafb;
+  color: #282c34;
+  transform: scale(1.05);
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: #61dafb;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger {
+  position: relative;
+  width: 30px;
+  height: 20px;
+}
+
+.hamburger::before,
+.hamburger::after,
+.hamburger div {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 4px;
+  background-color: #61dafb;
+  border-radius: 5px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger::before {
+  top: 0;
+}
+
+.hamburger div {
+  top: 8px;
+}
+
+.hamburger::after {
+  bottom: 0;
+}
+
+.hamburger.open::before {
+  transform: rotate(45deg);
+  top: 8px;
+}
+
+.hamburger.open div {
+  opacity: 0;
+}
+
+.hamburger.open::after {
+  transform: rotate(-45deg);
+  bottom: 8px;
+}
+
+.nav-links.open {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: #282c34;
+  flex-direction: column;
+  gap: 10px;
+  width: 200px;
+  padding: 15px;
+  display: flex;
+  border-radius: 8px;
+}
+
+.dark-mode-toggle {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: 20px;
+  transition: transform 0.3s;
+}
+
+.dark-mode-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #282c34;
+    flex-direction: column;
+    gap: 10px;
+    width: 200px;
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}

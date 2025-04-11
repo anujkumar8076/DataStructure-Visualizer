@@ -1,0 +1,223 @@
+.visualization-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(to right, #ece9e6, #ffffff);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.inline-options {
+  display: flex;
+  gap: 20px; /* Increase spacing between options for clarity */
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5px 10px; /* Add slight padding for separation */
+  background-color: #f9f9f9; /* Light background for distinction */
+  border-radius: 5px; /* Rounded corners for a modern look */
+  border: 1px solid #ddd; /* Subtle border for structure */
+  white-space: nowrap; /* Prevent wrapping */
+}
+
+.inline-options label {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between the radio button and text */
+  font-size: 14px; /* Adjust font size for clarity */
+  color: #333; /* Use a darker text color for readability */
+  cursor: pointer; /* Change cursor for interactivity */
+  transition: color 0.2s ease; /* Smooth hover transition */
+}
+
+.inline-options label:hover {
+  color: #007bff; /* Highlight text color on hover */
+}
+
+.inline-options input[type="radio"] {
+  accent-color: #007bff; /* Customize the color of the radio button */
+  cursor: pointer; /* Ensure pointer cursor for input */
+}
+
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #4a90e2;
+  margin-bottom: 15px;
+}
+
+.description {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 25px;
+  text-align: center;
+  max-width: 700px;
+}
+
+.input-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.value-input,
+.operation-select,
+.visualize-button {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.value-input:focus,
+.operation-select:focus,
+.visualize-button:hover {
+  border-color: #4a90e2;
+  box-shadow: 0 0 8px rgba(74, 144, 226, 0.2);
+}
+
+.visualize-button {
+  background-color: #4a90e2;
+  color: #fff;
+  cursor: pointer;
+}
+
+.visualize-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.visualization-output {
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+}
+
+.output-list {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.output-item {
+  position: relative;
+  padding: 15px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 18px;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+/* Index Styling */
+.output-item::after {
+  content: attr(data-index);
+  position: absolute;
+  bottom: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  color: #888;
+}
+
+/* Animation styles */
+.insert-animation .output-item:last-child {
+  animation: insert 0.5s ease-in-out;
+  background-color: #d4edda;
+}
+
+@keyframes insert {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.delete-animation .output-item {
+  animation: delete 0.5s ease-in-out;
+  background-color: #f8d7da;
+}
+
+@keyframes delete {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+}
+
+.search-animation .output-item {
+  animation: search 1s ease-in-out;
+  background-color: #cce5ff;
+}
+
+@keyframes search {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.placeholder-text {
+  font-size: 18px;
+  color: #aaa;
+  margin-top: 20px;
+}
+
+.message {
+  font-size: 16px;
+  color: #4a90e2;
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: center;
+  transition: opacity 0.5s;
+}
+
+.message:not(:empty) {
+  opacity: 1;
+}
+
+.visualization-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(to right, #ece9e6, #ffffff);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.delete-options, .search-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.delete-options label, .search-options label {
+  font-size: 16px;
+  color: #555;
+}
+
+
+/* The rest of the CSS remains the same */

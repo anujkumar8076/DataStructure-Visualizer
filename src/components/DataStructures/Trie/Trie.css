@@ -1,0 +1,84 @@
+.trie-container {
+  text-align: center;
+  margin: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.input-section {
+  margin-bottom: 20px;
+}
+
+input,
+button,
+select {
+  margin: 5px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+input {
+  width: 100%;
+  max-width: 400px; /* Ensures the input field does not stretch too wide */
+  transition: width 0.3s ease-in-out;
+}
+
+input:focus {
+  border-color: #76c7c0;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  background-color: #76c7c0;
+  color: white;
+  border: none;
+}
+
+button:hover {
+  background-color: #4ca6a0;
+}
+
+select {
+  font-size: 16px;
+  padding: 8px;
+}
+
+.message {
+  margin: 10px 0;
+  font-size: 18px;
+  color: #444;
+}
+
+.trie-visualization {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px;
+  font-family: monospace;
+}
+
+.trie-node {
+  margin: 5px 0;
+  padding: 5px;
+  position: relative;
+}
+
+.node-char {
+  background-color: #76c7c0;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.end-node {
+  background-color: #ff6f61;
+}
+
+input[type="text"] {
+  width: auto;
+  min-width: 200px;
+  max-width: 100%;
+}

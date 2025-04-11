@@ -1,0 +1,176 @@
+/* Quiz Container */
+.quiz-container {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding: 40px;
+    background: #f5f6fa;
+    min-height: 100vh;
+    color: #2c3e50;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+/* Quiz Title */
+.quiz-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #3498db;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Progress Section */
+.progress-section {
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background-color: #3498db;
+    transition: width 0.3s ease;
+}
+
+/* Question Section */
+.question-section {
+    margin-bottom: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.question {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.timer {
+    font-size: 1rem;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+/* Options Section */
+.options-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.option {
+    display: flex;
+    justify-content: flex-start;
+    /* Aligns items to the left */
+    align-items: center;
+    /* Keeps items vertically centered */
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.option:hover {
+    background: #ecf6fd;
+    border-color: #3498db;
+}
+
+.option input {
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.selected-option {
+    background: #d4edda;
+    border-color: #28a745;
+    font-weight: bold;
+}
+
+/* Buttons */
+.submit-button,
+.restart-button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-button:hover,
+.restart-button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+.submit-button:disabled {
+    background-color: #bfc9d1;
+    cursor: not-allowed;
+}
+
+.feedback {
+    margin-top: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #e74c3c;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Result Section */
+.result-section {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.result-title {
+    font-size: 2rem;
+    color: #27ae60;
+    margin-bottom: 10px;
+}
+
+.score-text {
+    font-size: 1.4rem;
+    color: #2c3e50;
+}

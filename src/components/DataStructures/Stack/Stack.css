@@ -1,0 +1,151 @@
+.stack-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+  text-align: center;
+  max-width: 600px;
+}
+
+.concept-list {
+  text-align: left;
+  margin-bottom: 20px;
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #2c3e50;
+}
+
+.controls-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.value-input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.operation-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.operation-button:hover {
+  transform: scale(1.05);
+}
+
+.push-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.pop-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.peek-button {
+  background-color: #007bff;
+  color: white;
+}
+
+.isEmpty-button,
+.isFull-button,
+.size-button {
+  background-color: #9c27b0;
+  color: white;
+}
+
+.stack-visualization {
+  margin-top: 20px;
+  width: 250px;
+  display: flex;
+  flex-direction: column-reverse;
+  border: 2px solid #2c3e50;
+  border-radius: 8px;
+  padding: 10px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.stack-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.stack-item {
+  background-color: #3498db;
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+  margin: 5px 0;
+  text-align: center;
+  border-radius: 4px;
+  animation: enter 0.5s ease-out;
+}
+
+.push-animation {
+  animation: push 0.5s ease-out;
+}
+
+.pop-animation {
+  animation: pop 0.5s ease-in;
+}
+
+@keyframes push {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pop {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+.placeholder-text {
+  color: #999;
+  font-size: 16px;
+}
+
+.peek-value {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #e67e22;
+}

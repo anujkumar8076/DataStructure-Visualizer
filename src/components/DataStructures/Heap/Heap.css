@@ -1,0 +1,34 @@
+.app-container {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 20px;
+}
+
+.controls {
+  margin: 20px;
+}
+
+button,
+input {
+  margin: 5px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+svg.tree-visualization {
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+}
+
+.steps {
+  margin: 20px;
+  padding: 10px;
+  background: #f4f4f4;
+  border-radius: 5px;
+  max-height: 100px;
+  overflow-y: auto;
+}
+
+circle {
+  transition: fill 0.5s;
+}
